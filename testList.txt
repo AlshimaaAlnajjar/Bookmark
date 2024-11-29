@@ -1,0 +1,16 @@
+rejected links:
+http://example.c
+ftp://example.com	
+https://example..com/path	
+.example.com	
+https://	
+http://example	
+example.	
+http://.example.com	
+
+
+accepted links:
+https://example.com#fragment
+http://example.com?query=123	
+https://example.com/path	
+https://example.com		

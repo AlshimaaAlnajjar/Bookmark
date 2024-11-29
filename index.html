@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="./img/bookmark.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  </head>
+  <body>
+    <main class="mx-auto p-3 p-md-5 bg-white mt-5">
+      <div class=" text-center">
+        <h1 class="bookmarker-heading position-relative d-inline-block">Bookmarker</h1>
+      </div>
+        
+      <div class="bookmark-body my-4 py-4">
+        <h2 class="text-center">
+          <i class="fa-solid fa-bookmark d-none d-md-inline-block"></i>
+          Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark d-none d-md-inline-block"></i>
+        </h2>
+        <div class="site-name w-100 d-flex flex-column justify-content-center my-4">
+          <label for="bookmarkName" class="pb-2 fw-semibold">
+            <i class="fa-solid fa-book-bookmark pe-2"></i>
+            Site Name
+          </label>
+          <input type="text" placeholder="Bookmark Name" class="form-control" id="bookmarkName" onkeyup="validateName()">
+        </div>
+        <div class="site-url w-100 d-flex flex-column justify-content-center  my-4">
+          <label for="bookmarkURL" class="pb-2 fw-semibold">
+            <i class="fa-solid fa-link pe-2"></i>
+            Site URL
+          </label>
+          <input type="url" placeholder="Website URL" class="form-control" id="bookmarkURL" onkeyup="validateURL()">
+        </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <button class="btn btn-submit px-5" id="submitBtn" onclick="addWebsite()">Submit</button>
+          </div>
+      </div>
+
+      <table class="table mt-4 text-center">
+        <thead>
+          <tr>
+          <th class="text-capitalize">index</th>
+          <th class="text-capitalize">Website Name</th>
+          <th class="text-capitalize">Visit</th>
+          <th class="text-capitalize">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tableContent">
+          <!-- <tr>
+              <td>1</td>
+              <td>website1</td>              
+              <td>
+                <a id="btn-visit" class="btn btn-primary">
+                  <i class="fa-solid fa-eye pe-2"></i>Visit
+                </a>
+              </td>
+              <td>
+                <button id="btn-delete" class="btn btn-danger pe-2">
+                  <i class="fa-solid fa-trash-can"></i>
+                  Delete
+                </button>
+              </td>
+          </tr> -->
+          </tbody>
+      </table>
+
+
+    </main>
+
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

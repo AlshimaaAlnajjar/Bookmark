@@ -1,0 +1,96 @@
+:root{
+  --background-color:#f7ecde;
+  --primary-color:#fec260;
+}
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+::selection {
+  background-color: var(--primary-color);
+  color: #352e28;
+}
+body{
+  padding: 0;
+  margin: 0;
+  font-family: "PT Sans Caption", sans-serif;
+  background-image: linear-gradient(rgba(0,0,0,0.65)0% 100%),url(../img/background.jpg);
+  background-size: cover;
+}
+@font-face {
+  font-family: "Pacifico";
+  src: url(../fonts/Pacifico-Regular.ttf);
+}
+@font-face {
+  font-family: "PT Sans Caption";
+  src: url(../fonts/PTSansCaption-Regular.ttf);
+}
+@font-face {
+  font-family: "Righteous";
+  src: url(../fonts/Righteous-Regular.ttf);
+}
+main{
+  width: 95%;
+  border-radius: 25px 25px 0px 0px;
+}
+.bookmarker-heading {
+  font-size: 3.125rem;
+  font-family: "Pacifico", cursive;
+  color: #352e28;
+  z-index: 1;
+}
+.bookmarker-heading::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  left: 0;
+  bottom: 0px;
+  background-color: var(--primary-color);
+  transition: height 350ms;
+  z-index: -1;
+}
+.bookmarker-heading:hover::before{
+  height: 50%;
+}
+.bookmark-body{
+  border-width: 2px 0 2px 0;
+  border-style: dotted;
+  border-color: #352e28;
+}
+.bookmark-body h2 {
+  font-family: "Righteous", cursive;
+  font-size: 1.5625rem;
+  color: var(--primary-color); 
+  background-image: linear-gradient(45deg, var(--primary-color) 32%, #bb4120 37%, var(--primary-color) 75%); 
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+}
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: var(--primary-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #fec26055;
+}
+.table {
+  vertical-align: middle !important;
+}
+.btn-submit {
+  color: black;
+  background-color: var(--primary-color);
+  border-color: #dba754;
+  transition: all 0.3;
+}
+.btn-submit:hover{
+  color: white;
+  background-color: #bb4120;
+  border-color: #a03315;
+  transform: scale(1.01);
+}
+
+.custom-swal-title{
+  line-height: 0.9rem;
+  font-size: 1.25rem;
+  color: black;
+}
